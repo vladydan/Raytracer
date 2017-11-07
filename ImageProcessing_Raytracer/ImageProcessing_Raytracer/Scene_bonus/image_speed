@@ -1,0 +1,4 @@
+eye EYE 0 0 0 -3 0 0
+ds LIGHT 255 255 255 -1000 400 500
+ds LIGHT 255 255 255 -1000 -400 500
+XClol OBJECT 170 170 170 0 0 0 0 0 0 0 0 0 fichier_obj/untitled.obj

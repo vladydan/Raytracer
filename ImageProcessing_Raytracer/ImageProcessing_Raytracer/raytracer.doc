@@ -1,0 +1,39 @@
+###############################################################################
+#                                                                             #
+#                                 RAYTRACER DOC                               #
+#                                                                             #
+###############################################################################
+
+File format for each line:
+
+     	    [NAME] [TYPE] [ARGS]
+
+Note that you can use the special char '#' to comment the line:
+     example: # Sphere put in 0 20 0 with a radius=10
+
+The number and the type of arguments are defined by the value of TYPE:
+
+    -if TYPE="EYE", the line must be like:
+    	[NAME] EYE [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [P0S_X (float)] [POS_Y (float)] [POS_Z (float)]
+
+    -if TYPE="LIGHT", the line must be like:
+    	[NAME] LIGHT [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)]
+
+    -if TYPE="SPHERE", the line must be like:
+    	[NAME] SPHERE [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [SHYNE (float)] [REFLECTION (float)] [TRANSPARENCY (float)] [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)] [RADIUS (float)]
+
+    -if TYPE="PLAN", the line must be like:
+    	[NAME] PLAN [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [SHYNE (float)] [REFLECTION (float)] [TRANSPARENCY (float)] [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)]
+
+    -if TYPE="CYLINDER", the line must be like:
+    	[NAME] CYLINDER [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [SHYNE (float)] [REFLECTION (float)] [TRANSPARENCY (float)] [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)] [RADIUS (float)]
+
+    -if TYPE="CONE", the line must be like:
+    	[NAME] CONE [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [SHYNE (float)] [REFLECTION (float)] [TRANSPARENCY (float)] [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)] [ANGLE (float)]
+
+Note that uou can also load a complex scene or object with the TYPE=OBJECT:
+     In this case, the line must be like:
+
+    	[NAME] OBJECT [RED (unsigned char)] [GREEN (unsigned char)] [BLUE (unsigned char)] [SHYNE (float)] [REFLECTION (float)] [TRANSPARENCY (float)] [ROT_X (float)] [ROT_Y (float)] [ROT_Z (float)] [POS_X (float)] [POS_Y (float)] [POS_Z (float)] [File (.obj)]
+
+WARNING: If you want to load an OBJECT, you have to put it on last position in your file
